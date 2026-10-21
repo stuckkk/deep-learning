@@ -1,0 +1,35 @@
+Setting up the Python environment for exercise 1
+================================================
+
+We use conda to manage the Python environment. If you do not have conda yet,
+install Miniforge, a minimal conda that uses the community conda-forge channel:
+
+    https://conda-forge.org/download/
+
+(An existing Anaconda or Miniconda installation works as well.)
+
+Open a terminal in this directory (the one that contains environment.yml) and run
+
+    conda env create -f environment.yml
+
+This creates an environment named deep_learning_ex_1 with Python, numpy,
+matplotlib, scikit-image and JupyterLab. Activate it with
+
+    conda activate deep_learning_ex_1
+
+and start JupyterLab from this directory:
+
+    jupyter lab
+
+Your browser opens JupyterLab; open the notebooks (*.ipynb) from its file browser.
+
+Alternative without conda: if you have Python 3.10 or newer, you can use a
+virtual environment and pip instead:
+
+    python -m venv .venv
+    source .venv/bin/activate        (Windows: .venv\Scripts\activate)
+    pip install -r requirements.txt
+    jupyter lab
+
+Note: the MNIST dataset (about 11 MB) is downloaded automatically the first time
+you run logistic_regression.ipynb. It is stored in the MNIST/ subdirectory.
